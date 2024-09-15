@@ -33,7 +33,7 @@ resource "aws_security_group" "aallow_ssh_terraform" {
 resource "aws_instance" "expense" {
     count = length(var.instance_names)
     instance_type = "t3.micro"
-    vpc_security_group_ids = [aws_security_group.aallow_ssh_terraform.id]
+    vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
     ami = "ami-09c813fb71547fc4f"
 
     tags = merge(
