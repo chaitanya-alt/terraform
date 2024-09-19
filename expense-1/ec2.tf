@@ -11,7 +11,7 @@ resource "aws_security_group" "allow_ssh_terraform" {
     
     }
 
-    ingess {
+    ingress {
         from_port = 22
         to_port = 22
         protocol = "tcp"
